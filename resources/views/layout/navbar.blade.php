@@ -17,7 +17,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Usuário</a>
                     <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Acessar</a></li>
+                        <li><a class="dropdown-item" href="{{route('login.index')}}">Acessar</a></li>
                         <li><a class="dropdown-item" href="#">New</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Logout</a></li>

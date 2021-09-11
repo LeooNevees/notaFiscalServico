@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', ['as' => 'home', 'uses' => function(){
     return view('home');
 }]);
+
+Route::get('/login', ['as' => 'login.index', 'uses' => function(){
+    return view('login');
+}]);

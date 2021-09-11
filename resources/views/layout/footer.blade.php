@@ -46,7 +46,7 @@
 
         <div class="row row-cols-1 g-4 mt-1 text-center">
             <div class="col-12">
-                <p>Desenvolvido por <a href="#" target="_blank">Leonardo Neves</a> &copy; 2021</p>
+                <p>Desenvolvido por <a href="#" target="_blank" class="removeTextDecoration">Leonardo Neves</a> &copy; 2021</p>
             </div>
         </div>
     </footer>
