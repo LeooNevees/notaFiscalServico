@@ -2,11 +2,6 @@ body{
     background-color: #eeeeee;
 }
 
-.footer{
-    position: fixed;
-    bottom: 0;
-}
-
 .removeTextDecoration{
     text-decoration: none;
 }

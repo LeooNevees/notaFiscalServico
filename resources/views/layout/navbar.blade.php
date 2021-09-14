@@ -12,17 +12,22 @@
                     <a class="nav-link active" aria-current="page" href="{{route('home')}}">Início</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Emitir NFS-e</a>
+                    <a class="nav-link" href="{{route('notice.index')}}">Emitir NFS-e</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Usuário</a>
-                    <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="{{route('login.index')}}">Acessar</a></li>
-                        <li><a class="dropdown-item" href="#">New</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Logout</a></li>
-                    </ul>
-                </li>
+                @if (Auth::check())
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Usuário</a>
+                        <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Configurações</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="{{route('login.logout')}}">Logout</a></li>
+                        </ul>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('login.index')}}">Acessar</a>
+                    </li>
+                @endif
             </ul>
         </div>
     </div>

@@ -15,8 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', ['as' => 'home', 'uses' => function(){
     return view('home');
-}]);
 
-Route::get('/login', ['as' => 'login.index', 'uses' => function(){
-    return view('login');
 }]);
+Route::get('/login/{msg?}', ['as' => 'login.index', 'uses' => 'App\Http\Controllers\LoginController@index']);
+
+Route::get('/login/logout', ['as' => 'login.logout', 'uses' => 'App\Http\Controllers\LoginController@logout']);
+
+Route::get('/notice', ['as' => 'notice.index', 'uses' => 'App\Http\Controllers\NoticeController@index']);
+
+Route::post('/login/entry', ['as' => 'login.entry', 'uses' => 'App\Http\Controllers\LoginController@entry']);
